@@ -104,7 +104,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollTo("home")}>
             <div className="w-8 h-8 grad-bg rounded-lg flex items-center justify-center text-white font-oswald font-bold text-sm">W</div>
-            <span className="font-oswald text-xl font-bold text-white">WAY<span className="grad-text">OUT</span></span>
+            <span className="font-oswald text-xl font-bold text-white">RYBACHEK<span className="grad-text"> TRAVEL</span></span>
           </div>
 
           <div className="hidden md:flex items-center gap-1">
@@ -483,8 +483,8 @@ export default function Index() {
               <div className="space-y-4">
                 {[
                   { icon: "Phone", text: "+7 (924) 214-92-43", label: "Звонок бесплатный" },
-                  { icon: "Mail", text: "hello@wayout.travel", label: "Напиши нам" },
-                  { icon: "MapPin", text: "Москва, Арбат 15", label: "Главный офис" },
+                  { icon: "Mail", text: "hello@rybachek.travel", label: "Напиши нам" },
+                  { icon: "MapPin", text: "Хабаровск, Шимановская 3", label: "Главный офис" },
                 ].map(c => (
                   <div key={c.text} className="flex items-center gap-4">
                     <div className="w-12 h-12 grad-bg rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -528,9 +528,9 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 grad-bg rounded-lg flex items-center justify-center text-white font-oswald font-bold text-sm">W</div>
-            <span className="font-oswald text-xl font-bold text-white">WAY<span className="grad-text">OUT</span></span>
+            <span className="font-oswald text-xl font-bold text-white">RYBACHEK<span className="grad-text"> TRAVEL</span></span>
           </div>
-          <p className="text-white/30 text-sm">© 2024 WayOut. Все права защищены.</p>
+          <p className="text-white/30 text-sm">© 2024 Rybachek Travel. Все права защищены.</p>
           <div className="flex items-center gap-4">
             {[
               { icon: "Instagram", label: "Instagram" },
