@@ -6,12 +6,60 @@ const EUROPE_IMG = "https://cdn.poehali.dev/projects/9f153344-a91e-4147-aa9d-9fa
 const ADVENTURE_IMG = "https://cdn.poehali.dev/projects/9f153344-a91e-4147-aa9d-9fa9ae3d2a8e/files/6f009b5a-67eb-4456-a074-5a8d0660eb74.jpg";
 
 const TOURS = [
-  { id: 1, title: "Бали: Остров богов", country: "Индонезия", type: "Пляж", days: 10, price: 89000, rating: 4.9, reviews: 234, image: HERO_IMG, tag: "🔥 Хит", direction: "Азия", dates: ["Май", "Июнь", "Июль"] },
-  { id: 2, title: "Рим & Флоренция", country: "Италия", type: "Экскурсии", days: 8, price: 112000, rating: 4.8, reviews: 189, image: EUROPE_IMG, tag: "✨ Новинка", direction: "Европа", dates: ["Апрель", "Сентябрь", "Октябрь"] },
-  { id: 3, title: "Мачу-Пикчу", country: "Перу", type: "Приключение", days: 14, price: 145000, rating: 4.9, reviews: 97, image: ADVENTURE_IMG, tag: "⚡ Лимит", direction: "Латинская Америка", dates: ["Июнь", "Июль", "Август"] },
-  { id: 4, title: "Дубай: Люкс 5★", country: "ОАЭ", type: "Люкс", days: 7, price: 98000, rating: 4.7, reviews: 312, image: EUROPE_IMG, tag: "", direction: "Ближний Восток", dates: ["Октябрь", "Ноябрь", "Декабрь"] },
-  { id: 5, title: "Таиланд: Острова", country: "Таиланд", type: "Пляж", days: 12, price: 76000, rating: 4.8, reviews: 445, image: HERO_IMG, tag: "🔥 Хит", direction: "Азия", dates: ["Ноябрь", "Декабрь", "Январь"] },
-  { id: 6, title: "Норвегия: Фьорды", country: "Норвегия", type: "Природа", days: 9, price: 134000, rating: 4.9, reviews: 78, image: ADVENTURE_IMG, tag: "✨ Новинка", direction: "Европа", dates: ["Июнь", "Июль", "Август"] },
+  { id: 1, title: "Бали: Остров богов", country: "Индонезия", type: "Пляж", days: 10, price: 89000, rating: 4.9, reviews: 234, image: HERO_IMG, tag: "🔥 Хит", direction: "Азия", dates: ["Май", "Июнь", "Июль"],
+    schedule: [
+      { date: "10 мая", nights: 10, hotel: "Alaya Resort 4★", price: 89000, seats: 4 },
+      { date: "17 мая", nights: 10, hotel: "Alaya Resort 4★", price: 94000, seats: 2 },
+      { date: "1 июня", nights: 10, hotel: "Alaya Resort 4★", price: 91000, seats: 6 },
+      { date: "15 июня", nights: 10, hotel: "COMO Uma 5★", price: 112000, seats: 3 },
+      { date: "5 июля", nights: 10, hotel: "Alaya Resort 4★", price: 87000, seats: 8 },
+    ]
+  },
+  { id: 2, title: "Рим & Флоренция", country: "Италия", type: "Экскурсии", days: 8, price: 112000, rating: 4.8, reviews: 189, image: EUROPE_IMG, tag: "✨ Новинка", direction: "Европа", dates: ["Апрель", "Сентябрь", "Октябрь"],
+    schedule: [
+      { date: "14 апреля", nights: 8, hotel: "Hotel Indigo Roma 4★", price: 112000, seats: 5 },
+      { date: "28 апреля", nights: 8, hotel: "Hotel Indigo Roma 4★", price: 118000, seats: 2 },
+      { date: "6 сентября", nights: 8, hotel: "NH Collection 4★", price: 115000, seats: 7 },
+      { date: "20 сентября", nights: 8, hotel: "NH Collection 4★", price: 109000, seats: 4 },
+      { date: "10 октября", nights: 8, hotel: "Hotel Indigo Roma 4★", price: 107000, seats: 6 },
+    ]
+  },
+  { id: 3, title: "Мачу-Пикчу", country: "Перу", type: "Приключение", days: 14, price: 145000, rating: 4.9, reviews: 97, image: ADVENTURE_IMG, tag: "⚡ Лимит", direction: "Латинская Америка", dates: ["Июнь", "Июль", "Август"],
+    schedule: [
+      { date: "2 июня", nights: 14, hotel: "Inkaterra Machu Picchu 5★", price: 145000, seats: 2 },
+      { date: "16 июня", nights: 14, hotel: "Belmond Sanctuary Lodge 5★", price: 162000, seats: 1 },
+      { date: "7 июля", nights: 14, hotel: "Inkaterra Machu Picchu 5★", price: 148000, seats: 3 },
+      { date: "21 июля", nights: 14, hotel: "Inkaterra Machu Picchu 5★", price: 145000, seats: 4 },
+      { date: "4 августа", nights: 14, hotel: "Belmond Sanctuary Lodge 5★", price: 155000, seats: 2 },
+    ]
+  },
+  { id: 4, title: "Дубай: Люкс 5★", country: "ОАЭ", type: "Люкс", days: 7, price: 98000, rating: 4.7, reviews: 312, image: EUROPE_IMG, tag: "", direction: "Ближний Восток", dates: ["Октябрь", "Ноябрь", "Декабрь"],
+    schedule: [
+      { date: "1 октября", nights: 7, hotel: "Atlantis The Palm 5★", price: 98000, seats: 10 },
+      { date: "15 октября", nights: 7, hotel: "Burj Al Arab 5★", price: 145000, seats: 3 },
+      { date: "5 ноября", nights: 7, hotel: "Atlantis The Palm 5★", price: 102000, seats: 8 },
+      { date: "20 ноября", nights: 7, hotel: "Burj Al Arab 5★", price: 149000, seats: 2 },
+      { date: "10 декабря", nights: 7, hotel: "Atlantis The Palm 5★", price: 115000, seats: 5 },
+    ]
+  },
+  { id: 5, title: "Таиланд: Острова", country: "Таиланд", type: "Пляж", days: 12, price: 76000, rating: 4.8, reviews: 445, image: HERO_IMG, tag: "🔥 Хит", direction: "Азия", dates: ["Ноябрь", "Декабрь", "Январь"],
+    schedule: [
+      { date: "3 ноября", nights: 12, hotel: "Samui Paradise 4★", price: 76000, seats: 12 },
+      { date: "17 ноября", nights: 12, hotel: "Six Senses Samui 5★", price: 98000, seats: 4 },
+      { date: "1 декабря", nights: 12, hotel: "Samui Paradise 4★", price: 79000, seats: 9 },
+      { date: "22 декабря", nights: 12, hotel: "Six Senses Samui 5★", price: 105000, seats: 3 },
+      { date: "10 января", nights: 12, hotel: "Samui Paradise 4★", price: 74000, seats: 7 },
+    ]
+  },
+  { id: 6, title: "Норвегия: Фьорды", country: "Норвегия", type: "Природа", days: 9, price: 134000, rating: 4.9, reviews: 78, image: ADVENTURE_IMG, tag: "✨ Новинка", direction: "Европа", dates: ["Июнь", "Июль", "Август"],
+    schedule: [
+      { date: "8 июня", nights: 9, hotel: "Fretheim Hotel 4★", price: 134000, seats: 6 },
+      { date: "22 июня", nights: 9, hotel: "Kviknes Hotel 4★", price: 139000, seats: 4 },
+      { date: "6 июля", nights: 9, hotel: "Fretheim Hotel 4★", price: 136000, seats: 5 },
+      { date: "20 июля", nights: 9, hotel: "Kviknes Hotel 4★", price: 142000, seats: 3 },
+      { date: "10 августа", nights: 9, hotel: "Fretheim Hotel 4★", price: 131000, seats: 7 },
+    ]
+  },
 ];
 
 const DIRECTIONS = ["Все", "Азия", "Европа", "Латинская Америка", "Ближний Восток"];
@@ -38,6 +86,89 @@ const FAQ_ITEMS = [
   { q: "Что входит в стоимость тура?", a: "Авиабилеты, трансфер, отель, завтраки и все перечисленные экскурсии. Доп. питание и шоппинг — за свой счёт." },
   { q: "Есть ли страховка?", a: "Медицинская страховка включена в каждый тур. Мы также предлагаем расширенное страхование с отменой поездки." },
 ];
+
+type ScheduleRow = { date: string; nights: number; hotel: string; price: number; seats: number };
+type Tour = typeof TOURS[number];
+
+function TourSchedulePopup({ tour, onClose }: { tour: Tour; onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" onClick={onClose}>
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+      <div
+        className="relative z-10 w-full max-w-2xl glass-strong rounded-3xl overflow-hidden shadow-2xl"
+        onClick={e => e.stopPropagation()}
+        style={{ boxShadow: "0 0 80px rgba(255,92,0,0.2), 0 0 0 1px rgba(255,92,0,0.15)" }}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
+          <div>
+            <h3 className="font-oswald text-xl font-bold text-white uppercase">{tour.title}</h3>
+            <p className="text-white/50 text-sm mt-0.5 flex items-center gap-1">
+              <Icon name="MapPin" size={12} />{tour.country} · {tour.days} дней · {tour.type}
+            </p>
+          </div>
+          <button onClick={onClose} className="w-8 h-8 glass rounded-xl flex items-center justify-center text-white/60 hover:text-white transition-colors">
+            <Icon name="X" size={16} />
+          </button>
+        </div>
+
+        {/* Table */}
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-white/8">
+                <th className="text-left px-6 py-3 text-white/40 text-xs uppercase tracking-wider font-medium">Дата вылета</th>
+                <th className="text-left px-4 py-3 text-white/40 text-xs uppercase tracking-wider font-medium">Ночей</th>
+                <th className="text-left px-4 py-3 text-white/40 text-xs uppercase tracking-wider font-medium">Отель</th>
+                <th className="text-right px-4 py-3 text-white/40 text-xs uppercase tracking-wider font-medium">Цена/чел</th>
+                <th className="text-center px-4 py-3 text-white/40 text-xs uppercase tracking-wider font-medium">Мест</th>
+                <th className="px-4 py-3" />
+              </tr>
+            </thead>
+            <tbody>
+              {(tour.schedule as ScheduleRow[]).map((row, i) => (
+                <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors group">
+                  <td className="px-6 py-3.5">
+                    <div className="flex items-center gap-2">
+                      <Icon name="Plane" size={14} className="text-[#FF5C00]" />
+                      <span className="text-white font-medium">{row.date}</span>
+                    </div>
+                  </td>
+                  <td className="px-4 py-3.5 text-white/70">{row.nights}</td>
+                  <td className="px-4 py-3.5 text-white/70 text-xs">{row.hotel}</td>
+                  <td className="px-4 py-3.5 text-right">
+                    <span className="font-oswald text-lg font-bold text-white">{(row.price / 1000).toFixed(0)}к</span>
+                    <span className="text-white/40 text-xs ml-1">₽</span>
+                  </td>
+                  <td className="px-4 py-3.5 text-center">
+                    <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${row.seats <= 2 ? "bg-red-500/20 text-red-400" : row.seats <= 5 ? "bg-yellow-500/20 text-yellow-400" : "bg-green-500/20 text-green-400"}`}>
+                      {row.seats}
+                    </span>
+                  </td>
+                  <td className="px-4 py-3.5">
+                    <button className="grad-bg text-white text-xs px-3 py-1.5 rounded-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                      Забронировать
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Footer */}
+        <div className="px-6 py-4 border-t border-white/8 flex items-center justify-between">
+          <p className="text-white/40 text-xs">Цены указаны за 1 человека. Включают перелёт и отель.</p>
+          <div className="flex items-center gap-3 text-xs">
+            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-green-400 inline-block" />много мест</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-yellow-400 inline-block" />мало</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-red-400 inline-block" />последние</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function useIntersection(ref: React.RefObject<Element>, threshold = 0.1) {
   const [visible, setVisible] = useState(false);
@@ -68,6 +199,7 @@ export default function Index() {
   const [priceMax, setPriceMax] = useState(200000);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [heroLoaded, setHeroLoaded] = useState(false);
+  const [activeTour, setActiveTour] = useState<Tour | null>(null);
 
   useEffect(() => {
     setTimeout(() => setHeroLoaded(true), 100);
@@ -310,8 +442,11 @@ export default function Index() {
                           <span className="font-oswald text-2xl font-bold text-white ml-1">{(tour.price / 1000).toFixed(0)}к</span>
                           <span className="text-white/40 text-sm"> ₽</span>
                         </div>
-                        <button className="grad-bg text-white px-4 py-2 rounded-xl text-sm font-semibold hover:scale-105 transition-transform">
+                        <button
+                          onClick={() => setActiveTour(tour)}
+                          className="grad-bg text-white px-4 py-2 rounded-xl text-sm font-semibold hover:scale-105 transition-transform flex items-center gap-1.5">
                           Подробнее
+                          <Icon name="CalendarDays" size={14} />
                         </button>
                       </div>
                     </div>
@@ -544,6 +679,10 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      {activeTour && (
+        <TourSchedulePopup tour={activeTour} onClose={() => setActiveTour(null)} />
+      )}
     </div>
   );
 }
