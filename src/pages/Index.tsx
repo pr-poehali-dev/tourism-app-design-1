@@ -90,6 +90,32 @@ const FAQ_ITEMS = [
 type ScheduleRow = { date: string; nights: number; hotel: string; price: number; seats: number };
 type Tour = typeof TOURS[number];
 
+function RybachekLogo({ size = 32 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#FF5C00" />
+          <stop offset="50%" stopColor="#FF2D78" />
+          <stop offset="100%" stopColor="#9B30FF" />
+        </linearGradient>
+      </defs>
+      {/* Background rounded square */}
+      <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
+      {/* Letter R */}
+      <text x="4" y="22" fontFamily="Oswald, sans-serif" fontWeight="700" fontSize="18" fill="white">R</text>
+      {/* Fish body */}
+      <ellipse cx="23" cy="20" rx="5" ry="3" fill="white" opacity="0.9" />
+      {/* Fish tail */}
+      <path d="M28 18 L31 15 L31 25 L28 22 Z" fill="white" opacity="0.85" />
+      {/* Fish eye */}
+      <circle cx="20" cy="19.5" r="0.9" fill="#FF5C00" />
+      {/* Fish fin */}
+      <path d="M21 17 Q23 15 25 17" stroke="white" strokeWidth="0.8" fill="none" opacity="0.7" />
+    </svg>
+  );
+}
+
 function TourSchedulePopup({ tour, onClose }: { tour: Tour; onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" onClick={onClose}>
@@ -235,7 +261,7 @@ export default function Index() {
       <nav className="fixed top-0 left-0 right-0 z-50 glass-strong">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollTo("home")}>
-            <div className="w-8 h-8 grad-bg rounded-lg flex items-center justify-center text-white font-oswald font-bold text-sm">W</div>
+            <RybachekLogo size={32} />
             <span className="font-oswald text-xl font-bold text-white">RYBACHEK<span className="grad-text"> TRAVEL</span></span>
           </div>
 
@@ -662,7 +688,7 @@ export default function Index() {
       <footer className="relative border-t border-white/5 py-10">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 grad-bg rounded-lg flex items-center justify-center text-white font-oswald font-bold text-sm">W</div>
+            <RybachekLogo size={32} />
             <span className="font-oswald text-xl font-bold text-white">RYBACHEK<span className="grad-text"> TRAVEL</span></span>
           </div>
           <p className="text-white/30 text-sm">© 2024 Rybachek Travel. Все права защищены.</p>
