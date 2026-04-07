@@ -482,7 +482,7 @@ export default function Index() {
               <p className="text-white/60 text-lg mb-8">Оставь заявку — менеджер перезвонит в течение 30 минут и подберёт идеальный тур для тебя.</p>
               <div className="space-y-4">
                 {[
-                  { icon: "Phone", text: "+7 (800) 555-01-23", label: "Звонок бесплатный" },
+                  { icon: "Phone", text: "+7 (924) 214-92-43", label: "Звонок бесплатный" },
                   { icon: "Mail", text: "hello@wayout.travel", label: "Напиши нам" },
                   { icon: "MapPin", text: "Москва, Арбат 15", label: "Главный офис" },
                 ].map(c => (
